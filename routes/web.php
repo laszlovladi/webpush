@@ -20,3 +20,8 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::post('/push','PushController@store');
+
+//make a push notification.
+Route::get('/push','PushController@push')->name('push');
